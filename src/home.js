@@ -27,7 +27,7 @@ const initHomePage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = '/src/pizza.jpg';
+      img.src = './pizza.jpg';
       img.alt = 'delicious pizza';
 
       const h2 = document.createElement('h2');
