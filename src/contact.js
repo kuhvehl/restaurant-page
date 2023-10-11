@@ -1,3 +1,5 @@
+import pizzaPhone from './pizzaphone.jpg';
+
 const initContactPage = () => {
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = '';
@@ -27,7 +29,7 @@ const initContactPage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = './pizzaphone.jpg';
+      img.src = pizzaPhone;
       img.alt = 'Pizza Phone';
 
       const h2 = document.createElement('h2');

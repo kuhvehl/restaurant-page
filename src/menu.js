@@ -1,3 +1,5 @@
+import bitcoinPizza from './bitcoinpizza.jpg';
+
 const initMenuPage = () => {
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = '';
@@ -30,7 +32,7 @@ const initMenuPage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = './bitcoinpizza.jpg';
+      img.src = bitcoinPizza;
       img.alt = 'Pizza Money';
 
       const h2 = document.createElement('h2');

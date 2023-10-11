@@ -1,3 +1,5 @@
+import pizza from './pizza.jpg';
+
 const initHomePage = () => {
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = '';
@@ -27,7 +29,7 @@ const initHomePage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = './pizza.jpg';
+      img.src = pizza;
       img.alt = 'delicious pizza';
 
       const h2 = document.createElement('h2');
