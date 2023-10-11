@@ -30,7 +30,7 @@ const initMenuPage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = '/src/bitcoinpizza.jpg';
+      img.src = './bitcoinpizza.jpg';
       img.alt = 'Pizza Money';
 
       const h2 = document.createElement('h2');

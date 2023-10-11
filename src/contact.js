@@ -27,7 +27,7 @@ const initContactPage = () => {
       nav.appendChild(ul);
 
       const img = document.createElement('img');
-      img.src = '/src/pizzaphone.jpg';
+      img.src = './pizzaphone.jpg';
       img.alt = 'Pizza Phone';
 
       const h2 = document.createElement('h2');
