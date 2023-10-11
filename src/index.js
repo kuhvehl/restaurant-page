@@ -3,9 +3,6 @@ import initMenuPage from './menu';
 import initContactPage from './contact';
 
 import './styles.css';
-import Pizza from './pizza.jpg';
-import BitcoinPizza from './bitcoinpizza.jpg'
-import PizzaPhone from './pizzaphone.jpg';
 
 initHomePage();
 
