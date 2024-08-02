@@ -15,7 +15,7 @@ export function homepageDisplay() {
     const h3Price = document.createElement('h3');
     const pBestpizza = document.createElement('p');
     const pPizzaPrice = document.createElement('p');
-    const menuLink = document.createElement('a');
+    const menuLink = document.createElement('button');
     const pFriends = document.createElement('p');
     const pFriendsPrice = document.createElement('p');
     const pLaughs = document.createElement('p');
@@ -47,6 +47,7 @@ export function homepageDisplay() {
     pLaughsPrice.classList.add('right');
     pHighFivesPrice.classList.add('right');
     pGoodVibesPrice.classList.add('right');
+    menuLink.classList.add('menu');
 
     h3Price.textContent = 'Price'
     pPizzaPrice.textContent = 'see '

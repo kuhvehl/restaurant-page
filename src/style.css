@@ -66,7 +66,13 @@
     background: transparent;
   }
 
-  nav button:hover {
+  #content button {
+    border: none;
+    background: transparent;
+    padding: 0px;
+  }
+
+  nav button:hover, #content button:hover {
     font-weight: bolder;
   }
 
@@ -99,6 +105,16 @@
   .content-main h3, .content-main p {
     width: 50%;
   } 
+
+  p.contact-left {
+    width: 25%;
+  }
+
+ p.contact-right {
+    width: 75%;
+    text-align: end;
+
+  }
 
   .right {
     text-align: end;
