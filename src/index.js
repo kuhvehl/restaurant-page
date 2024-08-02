@@ -1,22 +1,37 @@
-import initHomePage from './home';
-import initMenuPage from './menu';
-import initContactPage from './contact';
+import './style.css';
+import { homepageDisplay } from './homepage';
+import { contactDisplay } from './contact';
+import { menuDisplay } from './menu';
 
-import './styles.css';
 
-initHomePage();
 
-function handleLinkClick(event) {
-    const target = event.target;
-    if (target.id === 'about') {
-        initHomePage();
-    } else if (target.id === 'menu') {
-        initMenuPage();
-    } else if (target.id === 'contact') {
-        initContactPage();
+
+function loadPage(page) {
+    document.querySelector('#content').innerHTML = '';
+
+    let nav = document.querySelectorAll('button');
+
+    function addListeners() {
+        nav.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const page = e.target.getAttribute('class');
+                loadPage(page);
+            } )  
+        });
+    }
+
+
+    if (page === 'contact') {
+        contactDisplay();
+    } else if (page === 'menu') {
+        menuDisplay();
+    } else {
+        homepageDisplay();
+        nav = document.querySelectorAll('button');
+        addListeners();
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener('click', handleLinkClick);
-});
+loadPage();
+
+

@@ -1,43 +1,59 @@
-import pizzaPhone from './pizzaphone.jpg';
+export function contactDisplay() {
+    const content = document.querySelector('#content');
 
-const initContactPage = () => {
-    const contentDiv = document.getElementById('content');
-    contentDiv.innerHTML = '';
+    const contentHeader = document.createElement('div');
+    const h2Header = document.createElement('h2');
 
-    const header = document.createElement('header');
+    contentHeader.classList.add('content-header');
+    
+    h2Header.textContent = 'Contact';
 
-    const h1 = document.createElement('h1');
-    h1.textContent = "Cavell's Pizza";
+    const contentMain = document.createElement('div');
+    const phone = document.createElement('p');
+    const phoneInfo = document.createElement('p');
+    const email = document.createElement('p');
+    const emailInfo = document.createElement('p');
+    const address = document.createElement('p');
+    const address2 = document.createElement('p');
+    const addressInfo = document.createElement('p');
+    const addressInfo2 = document.createElement('p');
 
-    const nav = document.createElement('nav');
 
-    const ul = document.createElement('ul');
+    contentMain.classList.add('content-main');
 
-    const menuItems = ['About', 'Menu', 'Contact'];
+    phone.classList.add('contact-left');
+    email.classList.add('contact-left');
+    address.classList.add('contact-left');
+    address2.classList.add('contact-left');
 
-    menuItems.forEach(itemText => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.textContent = itemText;
-        a.id = itemText.toLowerCase()
-        li.appendChild(a);
-        ul.appendChild(li);
-      });
 
-      header.appendChild(h1);
-      header.appendChild(nav);
-      nav.appendChild(ul);
+    phone.textContent = 'Phone:';
+    email.textContent = 'Email:';
+    address.textContent =  'Address:';
 
-      const img = document.createElement('img');
-      img.src = pizzaPhone;
-      img.alt = 'Pizza Phone';
+    phoneInfo.classList.add('contact-right');
+    emailInfo.classList.add('contact-right');
+    addressInfo.classList.add('contact-right');
+    addressInfo2.classList.add('contact-right');
 
-      const h2 = document.createElement('h2');
-      h2.textContent = '1-800-PIZZA-NOW';
 
-    contentDiv.appendChild(header);
-    contentDiv.appendChild(img);
-    contentDiv.appendChild(h2);
-  };
-  
-  export default initContactPage;
+    phoneInfo.textContent = '123-456-7890'
+    emailInfo.textContent = 'info@cavellspizza.com'
+    addressInfo.textContent = '123 Main Street'
+    addressInfo2.textContent = 'New York, NY 12345'
+
+   
+    contentHeader.appendChild(h2Header);
+
+    contentMain.appendChild(phone);
+    contentMain.appendChild(phoneInfo)
+    contentMain.appendChild(email);
+    contentMain.appendChild(emailInfo);
+    contentMain.appendChild(address);
+    contentMain.appendChild(addressInfo);
+    contentMain.appendChild(address2);
+    contentMain.appendChild(addressInfo2);
+
+    content.appendChild(contentHeader);
+    content.appendChild(contentMain);
+}

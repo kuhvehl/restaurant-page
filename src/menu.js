@@ -1,47 +1,66 @@
-import bitcoinPizza from './bitcoinpizza.jpg';
+export function menuDisplay() {
+    const content = document.querySelector('#content');
 
-const initMenuPage = () => {
-    const contentDiv = document.getElementById('content');
-    contentDiv.innerHTML = '';
+    const contentHeader = document.createElement('div');
+    const h2Header = document.createElement('h2');
+    const h3Header = document.createElement('h3');
 
-    const header = document.createElement('header');
 
-    const h1 = document.createElement('h1');
-    h1.textContent = "Cavell's Pizza";
+    contentHeader.classList.add('content-header');
+    
+    h2Header.textContent = 'Menu';
+    h3Header.textContent = "*Whole Pie Prices*";
 
-    const menuHeading = document.createElement('h2');
-    menuHeading.textContent = "Our Menu:";
 
-    const nav = document.createElement('nav');
+    const contentMain = document.createElement('div');
+    const phone = document.createElement('p');
+    const phoneInfo = document.createElement('p');
+    const email = document.createElement('p');
+    const emailInfo = document.createElement('p');
+    const address = document.createElement('p');
+    const address2 = document.createElement('p');
+    const addressInfo = document.createElement('p');
+    const addressInfo2 = document.createElement('p');
 
-    const ul = document.createElement('ul');
 
-    const menuItems = ['About', 'Menu', 'Contact'];
+    contentMain.classList.add('content-main');
 
-    menuItems.forEach(itemText => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.textContent = itemText;
-        a.id = itemText.toLowerCase()
-        li.appendChild(a);
-        ul.appendChild(li);
-      });
+    phone.classList.add('left');
+    email.classList.add('left');
+    address.classList.add('left');
+    address2.classList.add('left');
 
-      header.appendChild(h1);
-      header.appendChild(nav);
-      nav.appendChild(ul);
 
-      const img = document.createElement('img');
-      img.src = bitcoinPizza;
-      img.alt = 'Pizza Money';
+    phone.textContent = 'Cheese';
+    email.textContent = 'Pepperoni'
+    address.textContent =  'Margherita';
+    address2.textContent = 'Hawaiian';
 
-      const h2 = document.createElement('h2');
-      h2.textContent = 'Large Pizza | 10k BTC';
+    phoneInfo.classList.add('right');
+    emailInfo.classList.add('right');
+    addressInfo.classList.add('right');
+    addressInfo2.classList.add('right');
 
-    contentDiv.appendChild(header);
-    contentDiv.appendChild(img);
-    contentDiv.appendChild(menuHeading)
-    contentDiv.appendChild(h2);
-  };
-  
-  export default initMenuPage;
+
+    phoneInfo.textContent = '$15'
+    emailInfo.textContent = '$18'
+    addressInfo.textContent = '$20'
+    addressInfo2.textContent = '$20'
+
+   
+    contentHeader.appendChild(h2Header);
+    contentHeader.appendChild(h3Header);
+
+
+    contentMain.appendChild(phone);
+    contentMain.appendChild(phoneInfo)
+    contentMain.appendChild(email);
+    contentMain.appendChild(emailInfo);
+    contentMain.appendChild(address);
+    contentMain.appendChild(addressInfo);
+    contentMain.appendChild(address2);
+    contentMain.appendChild(addressInfo2);
+
+    content.appendChild(contentHeader);
+    content.appendChild(contentMain);
+}
